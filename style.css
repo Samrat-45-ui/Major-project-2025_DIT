@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Set Inter as the primary font */
+    color: #ffffff; /* Default text color to white */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    display: flex;
+    flex-direction: column; /* Stack header, main content, footer vertically */
+
+    /* Background image with overlay for better text readability */
+    background: url('https://images.unsplash.com/photo-1516534775068-ba3e7458d266?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+    background-size: cover; /* Cover the entire viewport */
+    position: relative; /* Needed for pseudo-element overlay */
+}
+
+.container {
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Horizontal padding */
+}
+
+/* Header Styles */
+.main-header {
+    background-color: rgba(17, 24, 39, 0.9); /* Dark gray with slight transparency */
+    padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    z-index: 10; /* Ensure header is above other content */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 2.5rem; /* Large font size for title */
+    font-weight: 800; /* Extra bold */
+    color: #a855f7; /* Purple color */
+    letter-spacing: 0.05em; /* Wide letter spacing */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem; /* Space between nav items */ 
+}
+
+.main-nav a {
+    font-size: 1.125rem; /* Text size */
+    color: #d1d5db; /* Light gray text */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+}
+
+/* .main-nav a:hover {
+    color: #c084fc; /* Lighter purple on hover */
+  */
+
+/* Footer Styles */
+.main-footer {
+    background-color: rgba(17, 24, 39, 0.9); /* Dark gray with slight transparency */
+    padding: 1rem 0;
+    text-align: center;
+    color: #9ca3af; /* Gray text for footer */
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+.action-button {
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 2rem; /* Vertical and horizontal padding */
+    border-radius: 9999px; /* Pill-shaped buttons */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Large shadow */
+    transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+    transform: scale(1); /* Initial scale for transition effect */
+    border: none; /* No default border */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1.125rem; /* Text size */
+    text-decoration: none; /* Remove underline for anchor buttons */
+    display: inline-flex; /* Allow content to center */
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-message-box {
+    background-color: rgba(153, 27, 27, 0.7); /* Red background with transparency for errors */
+    border: 1px solid #dc2626; /* Red border */
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-message-box.info {
+    background-color: rgba(30, 64, 175, 0.7); /* Blue background for info messages */
+    border: 1px solid #1d4ed8; /* Blue border */
+}
+
+.hero-section {
+    flex-grow: 1; /* Allows the hero section to expand and fill available space */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    padding: 2.5rem; /* Padding around the content */
+    text-align: center; /* Center align text within the hero content box */
+}
+
+.hero-content {
+    background-color: rgba(31, 41, 55, 0.8); /* Dark gray background with transparency */
+    padding: 2.5rem;
+    border-radius: 0.75rem; /* Rounded corners */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.08); /* Strong shadow */
+    max-width: 42rem; /* Max width for the content box */
+    width: 100%; /* Ensure it takes full width up to max-width */
+    border: 1px solid #6d28d9; /* Purple border */
+    transition: all 0.5s ease-in-out; /* Smooth transition for hover effects */
+    transform: scale(1); /* Initial scale for transition */
+}
+
+/* .hero-content:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+ */
+
+.hero-title {
+    font-size: 3rem; /* Large title font size */
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    line-height: 1.2; /* Tighten line height for large text */
+}
+
+.hero-description {
+    font-size: 1.25rem; /* Larger description text */
+    color: #d1d5db; /* Light gray text */
+    margin-bottom: 2.5rem;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid columns */
+    gap: 1.5rem; /* Space between grid items */
+}
+
+.category-button {
+    color: white;
+    font-weight: 600; /* Semibold font */
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Shadow */
+    transition: all 0.3s ease-in-out; /* Smooth transitions */
+    transform: scale(1); /* Initial scale */
+    border: none;
+    cursor: pointer;
+    font-size: 1.125rem;
+    text-decoration: none;
+    display: flex; /* Use flex for centering text */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Specific background gradients for each category button */
+.science-btn {
+    background: linear-gradient(to right, #3b82f6, #1d4ed8); /* Blue gradient */
+}
+/* .science-btn:hover {
+    background: linear-gradient(to right, #2563eb, #1e40af); /* Darker blue on hover */
+ 
+
+.history-btn {
+    background: linear-gradient(to right, #22c55e, #15803d); /* Green gradient */
+}
+/* .history-btn:hover {
+    background: linear-gradient(to right, #16a34a, #14532d); /* Darker green on hover */
+ 
+
+.math-btn {
+    background: linear-gradient(to right, #a855f7, #7e22ce); /* Purple gradient */
+}
+/* .math-btn:hover {
+    background: linear-gradient(to right, #9333ea, #6b21a8); /* Darker purple on hover */
+ 
+
+.sports-btn {
+    background: linear-gradient(to right, #ef4444, #b91c1c); /* Red gradient */
+}
+/* .sports-btn:hover {
+    background: linear-gradient(to right, #dc2626, #991b1b); /* Darker red on hover */ 
+
+.geography-btn {
+    background: linear-gradient(to right, #f59e0b, #a16207); /* Yellow/Orange gradient */
+}
+/* .geography-btn:hover {
+    background: linear-gradient(to right, #d97706, #854d09); /* Darker yellow/orange on hover */
+
+.general-btn {
+    background: linear-gradient(to right, #ec4899, #be185d); /* Pink gradient */
+}
+/* .general-btn:hover {
+    background: linear-gradient(to right, #db2777, #9d174d); /* Darker pink on hover */ 
+
