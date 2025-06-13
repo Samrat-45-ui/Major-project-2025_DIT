@@ -12,7 +12,7 @@ body {
     flex-direction: column; /* Stack header, main content, footer vertically */
 
     /* Background image with overlay for better text readability */
-    background: url('https://images.unsplash.com/photo-1516534775068-ba3e7458d266?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+    background: url(#) no-repeat center center fixed;
     background-size: cover; /* Cover the entire viewport */
     position: relative; /* Needed for pseudo-element overlay */
 }
@@ -40,7 +40,7 @@ body {
 .site-title {
     font-size: 2.5rem; /* Large font size for title */
     font-weight: 800; /* Extra bold */
-    color: #a855f7; /* Purple color */
+    color: rgb(168, 85, 247); /* Purple color */
     letter-spacing: 0.05em; /* Wide letter spacing */
 }
 
@@ -57,9 +57,9 @@ body {
     transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
 }
 
-/* .main-nav a:hover {
+.main-nav a:hover {
     color: #c084fc; /* Lighter purple on hover */
-  */
+}
 
 /* Footer Styles */
 .main-footer {
@@ -126,9 +126,9 @@ body {
     transform: scale(1); /* Initial scale for transition */
 }
 
-/* .hero-content:hover {
+.hero-content:hover {
     transform: scale(1.02); /* Slightly enlarge on hover */
- */
+}
 
 .hero-title {
     font-size: 3rem; /* Large title font size */
@@ -171,39 +171,41 @@ body {
 .science-btn {
     background: linear-gradient(to right, #3b82f6, #1d4ed8); /* Blue gradient */
 }
-/* .science-btn:hover {
+.science-btn:hover {
     background: linear-gradient(to right, #2563eb, #1e40af); /* Darker blue on hover */
- 
+}
 
 .history-btn {
     background: linear-gradient(to right, #22c55e, #15803d); /* Green gradient */
 }
-/* .history-btn:hover {
+.history-btn:hover {
     background: linear-gradient(to right, #16a34a, #14532d); /* Darker green on hover */
- 
-
+}
 .math-btn {
     background: linear-gradient(to right, #a855f7, #7e22ce); /* Purple gradient */
 }
-/* .math-btn:hover {
+.math-btn:hover {
     background: linear-gradient(to right, #9333ea, #6b21a8); /* Darker purple on hover */
- 
+}
 
 .sports-btn {
     background: linear-gradient(to right, #ef4444, #b91c1c); /* Red gradient */
 }
-/* .sports-btn:hover {
-    background: linear-gradient(to right, #dc2626, #991b1b); /* Darker red on hover */ 
+.sports-btn:hover {
+    background: linear-gradient(to right, #dc2626, #991b1b); /* Darker red on hover */
+}
 
 .geography-btn {
     background: linear-gradient(to right, #f59e0b, #a16207); /* Yellow/Orange gradient */
 }
-/* .geography-btn:hover {
-    background: linear-gradient(to right, #d97706, #854d09); /* Darker yellow/orange on hover */
+.geography-btn:hover {
+    background: linear-gradient(to right, #d97706, #854d09); /* Darker yellow/orange on hover*/
+}
 
 .general-btn {
     background: linear-gradient(to right, #ec4899, #be185d); /* Pink gradient */
 }
-/* .general-btn:hover {
-    background: linear-gradient(to right, #db2777, #9d174d); /* Darker pink on hover */ 
+.general-btn:hover {
+    background: linear-gradient(to right, #db2777, #9d174d); /* Darker pink on hover */
+}
 
