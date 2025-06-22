@@ -1,0 +1,208 @@
+/* quiz.css - Specific Styles for the Quiz Page */
+
+.quiz-section {
+    flex-grow: 1; /* Allows the quiz section to expand and fill available space */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    padding: 2.5rem; /* Padding around the content */
+}
+
+.quiz-content-wrapper {
+    background-color: rgba(31, 41, 55, 0.8); /* Dark gray background with transparency */
+    padding: 40px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.08); /* Strong shadow */
+    max-width: 48rem; /* Max width for the content box */
+    width: 100%; /* Ensure it takes full width up to max-width */
+    border: 1px solid #6d28d9; /* Purple border */
+    transition: all 0.5s ease-in-out; /* Smooth transition for hover effects */
+    transform: scale(1); /* Initial scale for transition */
+}
+
+.quiz-content-wrapper:hover {
+    transform: scale(1.01); /* Slightly enlarge on hover */
+}
+
+.category-quiz-title {
+    font-size: 2.25rem; /* Large title font size */
+    font-weight: bold;
+    color: #c084fc; /* Purple color */
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Quiz Start Box */
+.quiz-start-box {
+    text-align: center;
+    padding: 2rem;
+}
+
+.start-quiz-text {
+    font-size: 1.25rem;
+    color: #d1d5db;
+    margin-bottom: 2rem;
+}
+
+.start-button {
+    background: linear-gradient(to right, #22c55e, #15803d); /* Green gradient */
+}
+.start-button:hover {
+    background: linear-gradient(to right, #16a34a, #14532d); /* Darker green on hover */
+}
+
+/* Quiz Question Box (hidden by default) */
+.quiz-question-box {
+    text-align: center;
+}
+
+.quiz-timer {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #facc15; /* Yellow color for timer */
+    margin-bottom: 1.5rem;
+}
+
+.question-display-area {
+    background-color: #374151; /* Darker gray for question background */
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Inner shadow */
+    margin-bottom: 1.5rem;
+}
+
+.question-text {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.question-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 15rem; /* Limit image height */
+    margin: 0 auto 1rem auto; /* Center image and add bottom margin */
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: contain; /* Ensure image fits within bounds without cropping */
+}
+
+.quiz-options-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for options */
+    gap: 1rem; /* Space between options */
+    margin-bottom: 1.5rem;
+}
+
+.option-label {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically align content */
+    background-color: #374151; /* Darker gray for option background */
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    border: 2px solid transparent; /* Transparent border for feedback */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.option-label:hover {
+    background-color: #4b5563; /* Slightly lighter gray on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.option-label input[type="radio"] {
+    /* Style the radio button itself */
+    -webkit-appearance: none; /* Hide default radio button */
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px; /* Custom size */
+    height: 20px;
+    border: 2px solid #a855f7; /* Purple border */
+    border-radius: 50%; /* Make it round */
+    margin-right: 1rem;
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0; /* Prevent shrinking */
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.option-label input[type="radio"]:checked {
+    background-color: #a855f7; /* Fill with purple when checked */
+    border-color: #a855f7;
+}
+
+.option-label input[type="radio"]:checked::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: white; /* White dot in the center */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.option-label span {
+    font-size: 1.125rem; /* Text size for options */
+    color: #ffffff;
+    flex-grow: 1; /* Allow text to take available space */
+    text-align: left;
+}
+
+/* Feedback message styling (Correct/Wrong) */
+.feedback-text {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+    min-height: 1.5rem; /* Reserve space to prevent layout shifts */
+}
+
+/* Specific styles for correct answer feedback */
+.feedback-correct {
+    color: #4ade80; /* Green text for correct */
+}
+
+/* Specific styles for incorrect answer feedback */
+.feedback-incorrect {
+    color: #f87171; /* Red text for incorrect */
+}
+
+/* New class for the selected option (before correctness is known) */
+.option-selected {
+    border-color: #a855f7; /* Purple border to indicate selection */
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.5); /* Purple glow */
+}
+
+/* Styles for highlighting selected/correct options */
+.option-correct {
+    background-color: #22c55e; /* Green background for correct answer */
+    border-color: #4ade80; /* Green border */
+    box-shadow: 0 0 15px rgba(34, 197, 94, 0.5); /* Green glow */
+}
+
+.option-incorrect {
+    background-color: #dc2626; /* Red background for incorrect selected answer */
+    border-color: #f87171; /* Red border */
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.5); /* Red glow */
+}
+
+/* Navigation Buttons Container (now only for Next button) */
+.quiz-navigation-buttons {
+    display: flex;
+    justify-content: center; /* Center the single button */
+    margin-top: 2rem;
+}
+
+.next-button {
+    background: linear-gradient(to right, #a855f7, #7e22ce); /* Purple gradient */
+    flex-grow: 0; /* Don't grow */
+    max-width: 250px; /* Limit max width for a single button */
+    width: 100%; /* Ensure it takes full width up to max-width */
+}
+.next-button:hover {
+    background: linear-gradient(to right, #9333ea, #6b21a8); /* Darker purple on hover */
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster - Results</title>
+    <!-- Global styles for the entire website -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Specific styles for the result page -->
+    <link rel="stylesheet" href="result.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="main-header">
+        <div class="container header-content">
+            <h1 class="site-title">QuizMaster</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Result Section -->
+    <section class="result-section">
+        <div class="container result-content-wrapper">
+            <h2 class="result-title">Quiz Complete!</h2>
+            <!-- Final Score Display -->
+            <p id="final-score" class="final-score-text"></p>
+
+            <div class="result-buttons-container">
+                <!-- Button to play again -->
+                <button id="play-again-btn" class="action-button play-again-button">
+                    Play Again
+                </button>
+                <!-- Button to go back to categories -->
+                <a href="index.html" class="action-button choose-category-button">
+                    Choose Category
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="main-footer">
+        <p>&copy; 2025 QuizMaster. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript file for result page logic -->
+    <script type="module" src="result.js"></script>
+</body>
+</html>
