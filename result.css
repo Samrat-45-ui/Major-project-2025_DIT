@@ -1,0 +1,63 @@
+/* result.css - Specific Styles for the Result Page */
+
+.result-section {
+    flex-grow: 1; /* Allows the result section to expand and fill available space */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    padding: 2.5rem; /* Padding around the content */
+}
+
+.result-content-wrapper {
+    background-color: rgba(31, 41, 55, 0.8); /* Dark gray background with transparency */
+    padding: 2.5rem;
+    border-radius: 0.75rem; /* Rounded corners */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.08); /* Strong shadow */
+    max-width: 36rem; /* Max width for the content box */
+    width: 100%; /* Ensure it takes full width up to max-width */
+    border: 1px solid #6d28d9; /* Purple border */
+    text-align: center;
+    transition: all 0.5s ease-in-out; /* Smooth transition for hover effects */
+    transform: scale(1); /* Initial scale for transition */
+}
+
+.result-content-wrapper:hover {
+    transform: scale(1.01); /* Slightly enlarge on hover */
+}
+
+.result-title {
+    font-size: 2.5rem; /* Large title font size */
+    font-weight: bold;
+    color: #4ade80; /* Green color for results */
+    margin-bottom: 1.5rem;
+}
+
+.final-score-text {
+    font-size: 2rem; /* Larger font for the score */
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.result-buttons-container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically by default */
+    gap: 1rem; /* Space between buttons */
+    justify-content: center;
+}
+
+.play-again-button {
+    background: linear-gradient(to right, #3b82f6, #1d4ed8); /* Blue gradient */
+}
+.play-again-button:hover {
+    background: linear-gradient(to right, #2563eb, #1e40af); /* Darker blue on hover */
+}
+
+.choose-category-button {
+    background: linear-gradient(to right, #a855f7, #7e22ce); /* Purple gradient */
+}
+.choose-category-button:hover {
+    background: linear-gradient(to right, #9333ea, #6b21a8); /* Darker purple on hover */
+}
+
+

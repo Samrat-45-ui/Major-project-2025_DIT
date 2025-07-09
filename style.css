@@ -1,3 +1,9 @@
+/* style.css - Global Styles for QuizMaster Website */
+
+/* Import Google Fonts - Inter for a modern, clean look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+/* Basic Reset and Body Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,15 +18,28 @@ body {
     flex-direction: column; /* Stack header, main content, footer vertically */
 
     /* Background image with overlay for better text readability */
-    background: url(#) no-repeat center center fixed;
+    background: url('https://images.unsplash.com/photo-1516534775068-ba3e7458d266?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
     background-size: cover; /* Cover the entire viewport */
     position: relative; /* Needed for pseudo-element overlay */
 }
 
+/* Pseudo-element for background overlay to improve text contrast */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay with 60% opacity */
+    z-index: -1; /* Place behind content */
+}
+
+/* Container for consistent content width */
 .container {
     max-width: 1200px; /* Max width for content */
     margin: 0 auto; /* Center the container */
-    padding: 0 20px; /* Horizontal padding */ 
+    padding: 0 20px; /* Horizontal padding */
 }
 
 /* Header Styles */
@@ -40,14 +59,14 @@ body {
 .site-title {
     font-size: 2.5rem; /* Large font size for title */
     font-weight: 800; /* Extra bold */
-    color: rgb(168, 85, 247); /* Purple color */
+    color: #a855f7; /* Purple color */
     letter-spacing: 0.05em; /* Wide letter spacing */
 }
 
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: 1.5rem; /* Space between nav items */ 
+    gap: 1.5rem; /* Space between nav items */
 }
 
 .main-nav a {
@@ -71,6 +90,7 @@ body {
     margin-top: auto; /* Push footer to the bottom */
 }
 
+/* Base styles for all action buttons */
 .action-button {
     color: white;
     font-weight: bold;
@@ -88,6 +108,17 @@ body {
     justify-content: center;
 }
 
+.action-button:hover {
+    transform: scale(1.05); /* Scale up 5% on hover */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* Larger shadow on hover */
+}
+
+.action-button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.75); /* Custom focus ring (purple) */
+}
+
+/* Custom message box for alerts (replaces alert()) */
 .custom-message-box {
     background-color: rgba(153, 27, 27, 0.7); /* Red background with transparency for errors */
     border: 1px solid #dc2626; /* Red border */
@@ -105,6 +136,25 @@ body {
     border: 1px solid #1d4ed8; /* Blue border */
 }
 
+/* Shake animation for error messages */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.4s ease-in-out;
+}
+
+/* Utility classes for hiding elements */
+.hidden {
+    display: none !important;
+}
+
+/* --- Styles specific to index.html (formerly in index.css) --- */
 .hero-section {
     flex-grow: 1; /* Allows the hero section to expand and fill available space */
     display: flex;
@@ -146,66 +196,77 @@ body {
 
 .categories-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid columns */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 1.5rem; /* Space between grid items */
 }
 
 .category-button {
     color: white;
-    font-weight: 600; /* Semibold font */
+    font-weight: 600; 
     padding: 1rem 1.5rem;
     border-radius: 0.5rem; /* Rounded corners */
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Shadow */
-    transition: all 0.3s ease-in-out; /* Smooth transitions */
+    transition: all 0.3s ease-in-out;
     transform: scale(1); /* Initial scale */
     border: none;
     cursor: pointer;
     font-size: 1.125rem;
     text-decoration: none;
-    display: flex; /* Use flex for centering text */
+    display: flex;         /* Flexbox for centering content */
     align-items: center;
     justify-content: center;
 }
 
-/* Specific background gradients for each category button */
+.category-button:hover {
+    transform: scale(1.05); /* Enlarge on hover */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.category-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.75); 
+}
+
+/* Specific background gradients for each category button representing variation of category */
 .science-btn {
-    background: linear-gradient(to right, #3b82f6, #1d4ed8); /* Blue gradient */
+    background: linear-gradient(to right, #3b82f6, #1d4ed8); 
 }
 .science-btn:hover {
-    background: linear-gradient(to right, #2563eb, #1e40af); /* Darker blue on hover */
+    background: linear-gradient(to right, #2563eb, #1e40af); 
 }
 
 .history-btn {
-    background: linear-gradient(to right, #22c55e, #15803d); /* Green gradient */
+    background: linear-gradient(to right, #22c55e, #15803d); 
 }
 .history-btn:hover {
-    background: linear-gradient(to right, #16a34a, #14532d); /* Darker green on hover */
+    background: linear-gradient(to right, #16a34a, #14532d); 
 }
+
 .math-btn {
-    background: linear-gradient(to right, #a855f7, #7e22ce); /* Purple gradient */
+    background: linear-gradient(to right, #a855f7, #7e22ce); 
 }
 .math-btn:hover {
-    background: linear-gradient(to right, #9333ea, #6b21a8); /* Darker purple on hover */
+    background: linear-gradient(to right, #9333ea, #6b21a8); 
 }
 
 .sports-btn {
-    background: linear-gradient(to right, #ef4444, #b91c1c); /* Red gradient */
+    background: linear-gradient(to right, #ef4444, #b91c1c); 
 }
 .sports-btn:hover {
-    background: linear-gradient(to right, #dc2626, #991b1b); /* Darker red on hover */
+    background: linear-gradient(to right, #dc2626, #991b1b); 
 }
 
 .geography-btn {
-    background: linear-gradient(to right, #f59e0b, #a16207); /* Yellow/Orange gradient */
+    background: linear-gradient(to right, #f59e0b, #a16207); 
 }
 .geography-btn:hover {
-    background: linear-gradient(to right, #d97706, #854d09); /* Darker yellow/orange on hover*/
+    background: linear-gradient(to right, #d97706, #854d09); 
 }
 
 .general-btn {
-    background: linear-gradient(to right, #ec4899, #be185d); /* Pink gradient */
+    background: linear-gradient(to right, #ec4899, #be185d); 
 }
 .general-btn:hover {
-    background: linear-gradient(to right, #db2777, #9d174d); /* Darker pink on hover */
+    background: linear-gradient(to right, #db2777, #9d174d); 
 }
 

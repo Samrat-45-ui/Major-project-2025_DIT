@@ -206,3 +206,24 @@
 .next-button:hover {
     background: linear-gradient(to right, #9333ea, #6b21a8); /* Darker purple on hover */
 }
+
+.custom-message-box {
+    background-color: #b91c1c;
+    border: 3px solid #f87171; 
+    color: #ffffff; 
+    padding: 1.5rem; 
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /*shadow */
+    text-align: center;
+    margin-top: 2rem; 
+    font-size: 1.3rem;
+    font-weight: bold;
+    position: relative; /* For z-index to work */
+    z-index: 1000; /* Ensure it's on top of everything */  /*Took help from internet to make it work */
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-message-box.info {
+    background-color: #1e40af; /* Deep Blue background for info messages */
+    border: 3px solid #60a5fa; /* Bright Blue border */
+}
