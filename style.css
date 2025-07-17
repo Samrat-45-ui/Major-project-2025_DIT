@@ -11,19 +11,17 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif; /* Set Inter as the primary font */
+    font-family: 'Inter', sans-serif; 
     color: #ffffff; /* Default text color to white */
     min-height: 100vh; /* Ensure body takes full viewport height */
     display: flex;
     flex-direction: column; /* Stack header, main content, footer vertically */
-
-    /* Background image with overlay for better text readability */
-    background: url('https://images.unsplash.com/photo-1516534775068-ba3e7458d266?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
-    background-size: cover; /* Cover the entire viewport */
+    background: url('./assests/gif.mp4') no-repeat center center fixed;
+    background-size: cover; 
     position: relative; /* Needed for pseudo-element overlay */
 }
 
-/* Pseudo-element for background overlay to improve text contrast */
+
 body::before {
     content: '';
     position: absolute;
@@ -86,7 +84,7 @@ body::before {
     padding: 1rem 0;
     text-align: center;
     color: #9ca3af; /* Gray text for footer */
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3); 
     margin-top: auto; /* Push footer to the bottom */
 }
 
@@ -94,16 +92,16 @@ body::before {
 .action-button {
     color: white;
     font-weight: bold;
-    padding: 0.75rem 2rem; /* Vertical and horizontal padding */
+    padding: 0.75rem 2rem; 
     border-radius: 9999px; /* Pill-shaped buttons */
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Large shadow */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
     transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
     transform: scale(1); /* Initial scale for transition effect */
-    border: none; /* No default border */
+    border: none; 
     cursor: pointer; /* Pointer cursor on hover */
-    font-size: 1.125rem; /* Text size */
-    text-decoration: none; /* Remove underline for anchor buttons */
-    display: inline-flex; /* Allow content to center */
+    font-size: 1.125rem; 
+    text-decoration: none; 
+    display: inline-flex; 
     align-items: center;
     justify-content: center;
 }
