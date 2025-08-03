@@ -4,7 +4,7 @@ export const questions = {
       question: "What planet is known as the Red Planet?",
       options: ["Earth", "Mars", "Jupiter", "Venus"],
       answer: "Mars",
-      image: "https://upload.wikimedia.org/wikipedia/commons/0/02/OSIRIS_Mars_true_color.jpg"
+      image: "./assests/Mars-img.jpg"
     },
     {
       question: "What gas do plants absorb from the atmosphere? (Hint: It's what we exhale!)",
