@@ -3,7 +3,7 @@
 /* Import Google Fonts - Inter for a modern, clean look */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
 
-/* Basic Reset and Body Styles */
+/* Basic Body Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -16,8 +16,6 @@ body {
     min-height: 100vh; /* Ensure body takes full viewport height */
     display: flex;
     flex-direction: column; /* Stack header, main content, footer vertically */
-    background: url('./assests/gif.mp4') no-repeat center center fixed;
-    background-size: cover; 
     position: relative; /* Needed for pseudo-element overlay */
 }
 
@@ -29,7 +27,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay with 60% opacity */
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay with 60% opacity in the main body. */
     z-index: -1; /* Place behind content */
 }
 
