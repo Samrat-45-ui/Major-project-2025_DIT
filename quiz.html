@@ -22,48 +22,50 @@
     </header>
 
     <!-- Main Quiz Section -->
-    <section class="quiz-section">
-        <div class="container quiz-content-wrapper">
-            <!-- Category Title: Displays the name of the selected quiz category -->
-            <h2 id="category-title" class="category-quiz-title"></h2>
+    <main>
+        <section class="quiz-section">
+            <div class="container quiz-content-wrapper">
+                <!-- Category Title: Displays the name of the selected quiz category -->
+                <h2 id="category-title" class="category-quiz-title"></h2>
 
-            <!-- Start Quiz Container: Shown initially, hides after quiz starts -->
-            <div id="start-quiz-container" class="quiz-start-box">
-                <p class="start-quiz-text">Ready to challenge yourself?</p>
-                <button id="start-quiz-btn" class="action-button start-button">Start Quiz</button>
+                <!-- Start Quiz Container: Shown initially, hides after quiz starts -->
+                <div id="start-quiz-container" class="quiz-start-box">
+                    <p class="start-quiz-text">Ready to challenge yourself?</p>
+                    <button id="start-quiz-btn" class="action-button start-button">Start Quiz</button>
+                </div>
+
+                <!-- Quiz Question Container: Hidden initially, shown when quiz starts -->
+                <div id="question-container" class="quiz-question-box hidden">
+                    <!-- Timer Display -->
+                    <p id="timer" class="quiz-timer"></p>
+
+                    <!-- Question Box: Contains the question text and optional image -->
+                    <div class="question-display-area">
+                        <p id="question-text" class="question-text"></p>
+                        <!-- Image for the question (if available). onerror hides it if broken. -->
+                        <img id="question-image" src="" alt="Question Image" class="question-image hidden" onerror="this.style.display='none'">
+                    </div>
+
+                    <!-- Options Container: Where answer choices are displayed -->
+                    <div id="options-container" class="quiz-options-grid">
+                        <!-- Options will be dynamically loaded here by JavaScript -->
+                    </div>
+                    <!-- Feedback Message: Displays "Correct!" or "Wrong!" -->
+                    <p id="feedback-message" class="feedback-text"></p>
+
+                    <div id="custom-message-box" class="custom-message-box hidden">
+                        <p id="custom-message-text"></p>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="quiz-navigation-buttons">
+                        <!-- Only the Next Question Button remains -->
+                        <button id="next-question-btn" class="action-button next-button">Next Question</button>
+                    </div>
+                </div>
             </div>
-
-            <!-- Quiz Question Container: Hidden initially, shown when quiz starts -->
-            <div id="question-container" class="quiz-question-box hidden">
-                <!-- Timer Display -->
-                <p id="timer" class="quiz-timer"></p>
-
-                <!-- Question Box: Contains the question text and optional image -->
-                <div class="question-display-area">
-                    <p id="question-text" class="question-text"></p>
-                    <!-- Image for the question (if available). onerror hides it if broken. -->
-                    <img id="question-image" src="" alt="Question Image" class="question-image hidden" onerror="this.style.display='none'">
-                </div>
-
-                <!-- Options Container: Where answer choices are displayed -->
-                <div id="options-container" class="quiz-options-grid">
-                    <!-- Options will be dynamically loaded here by JavaScript -->
-                </div>
-                <!-- Feedback Message: Displays "Correct!" or "Wrong!" -->
-                <p id="feedback-message" class="feedback-text"></p>
-
-                <div id="custom-message-box" class="custom-message-box hidden">
-                    <p id="custom-message-text"></p>
-                </div>
-
-                <!-- Navigation Buttons -->
-                <div class="quiz-navigation-buttons">
-                    <!-- Only the Next Question Button remains -->
-                    <button id="next-question-btn" class="action-button next-button">Next Question</button>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer Section -->
     <footer class="main-footer">

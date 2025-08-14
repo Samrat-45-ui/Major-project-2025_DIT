@@ -4,7 +4,7 @@ export const questions = {
       question: "What planet is known as the Red Planet?",
       options: ["Earth", "Mars", "Jupiter", "Venus"],
       answer: "Mars",
-      image: "./assests/Mars-img.jpg"
+      image: "./assets/Mars-img.jpg"
     },
     {
       question: "What gas do plants absorb from the atmosphere? (Hint: It's what we exhale!)",
@@ -50,7 +50,7 @@ export const questions = {
       question: "Identify this molecule:",
       options: ["Glucose", "DNA", "Water", "Oxygen"],
       answer: "DNA",
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/DNA_chemical_structure.svg/1200px-DNA_chemical_structure.svg.png"
+      image: "./assets/Mars-img.jpg"
     }
   ],
 

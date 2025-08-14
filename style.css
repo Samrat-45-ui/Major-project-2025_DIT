@@ -111,10 +111,10 @@ body::before {
 
 .action-button:focus {
     outline: none; /* Remove default focus outline */
-    box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.75); /* Custom focus ring (purple) */
+    box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.75); /* Custom focus on click makes a purple ring figure */
 }
 
-/* Custom message box for alerts (replaces alert()) */
+/* Custom message box for alerts */
 .custom-message-box {
     background-color: rgba(153, 27, 27, 0.7); /* Red background with transparency for errors */
     border: 1px solid #dc2626; /* Red border */

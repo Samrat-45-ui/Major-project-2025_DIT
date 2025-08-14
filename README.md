@@ -1,1 +1,1 @@
-# Major-project-2025_DIT
+# Major-project-2025_DI
