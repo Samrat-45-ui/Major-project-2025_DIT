@@ -164,13 +164,8 @@ function checkAnswer(selectedOptionValue) {
 }
 
 function loadNextQuestion(forced = false) {
-    if (!hasUserSelectedAnswer && !forced) {
-        showCustomMessage('Please select an answer before proceeding!', 'error');
-        console.log("DEBUG: User clicked Next without selecting an answer. Showing error.");
-        return; // Stop the function here, do not proceed to the next question.
-    }
 
-    nextQuestionButton.disabled = true;
+    nextQuestionButton.disabled = true;  // Disable the next question button
 
     // Introduce a short delay to allow feedback to be seen before moving to the next question.
     setTimeout(() => {
