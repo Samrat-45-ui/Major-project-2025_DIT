@@ -1,10 +1,12 @@
+// Questions for the quiz application
+
 export const questions = {
   science: [
     {
       question: "What planet is known as the Red Planet?",
       options: ["Earth", "Mars", "Jupiter", "Venus"],
       answer: "Mars",
-      image: "C:\\Users\\22sshrestha\\OneDrive - Wakatipu High School\\Documents\\DIT_ Major project\\Major-project-2025_DIT\\assets\\Mars-img.jpg"
+      
     },
     {
       question: "What gas do plants absorb from the atmosphere? (Hint: It's what we exhale!)",
@@ -18,8 +20,8 @@ export const questions = {
     },
     {
       question: "What is the chemical symbol for water?",
-      options: ["H2O", "O2", "CO2", "NaCl"],
-      answer: "H2O"
+      options: ["H₂O", "O₂", "CO₂", "NaCl"],
+      answer: "H₂O"
     },
     {
       question: "How many legs does an insect have?",
@@ -47,10 +49,9 @@ export const questions = {
       answer: "100°C"
     },
     {
-      question: "Identify this molecule:",
+      question: "What is the genetic material in living organisms?",
       options: ["Glucose", "DNA", "Water", "Oxygen"],
-      answer: "DNA",
-      image: "./assets/Mars-img.jpg"
+      answer: "DNA"
     }
   ],
 
@@ -69,7 +70,6 @@ export const questions = {
       question: "The Great Wall is located in which country?",
       options: ["Japan", "China", "India", "Korea"],
       answer: "China",
-      image: "https://upload.wikimedia.org/wikipedia/commons/6/6f/Mutianyu_Great_Wall_2018.jpg"
     },
     {
       question: "Who discovered America?",
@@ -105,7 +105,6 @@ export const questions = {
       question: "Who painted the Mona Lisa?",
       options: ["Leonardo da Vinci", "Michelangelo", "Raphael", "Donatello"],
       answer: "Leonardo da Vinci",
-      image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/800px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg"
     }
   ],
 
@@ -268,7 +267,6 @@ export const questions = {
       question: "Which famous landmark is located in Paris, France?",
       options: ["Big Ben", "Colosseum", "Eiffel Tower", "Statue of Liberty"],
       answer: "Eiffel Tower",
-      image: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Eiffel_Tower_from_Champs_de_Mars%2C_Paris_August_2023.jpg"
     }
   ],
   general: [

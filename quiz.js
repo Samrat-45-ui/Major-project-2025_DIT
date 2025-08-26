@@ -48,7 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-function startQuiz() {
+
+function startQuiz() {  // Start the quiz
     startQuizContainer.classList.add('hidden');
     questionContainer.classList.remove('hidden');
     currentQuestionIndex = 0;
@@ -70,7 +71,7 @@ function loadQuestion() {
 
     questionTextElement.textContent = question.question;
 
-    // Update question image
+    // Update question image if available
     if (question.image) {
         questionImageElement.src = question.image;
         questionImageElement.classList.remove('hidden');

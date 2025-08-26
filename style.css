@@ -53,10 +53,18 @@ body::before {
 }
 
 .site-title {
-    font-size: 2.5rem; /* Large font size for title */
+    font-size: 1.5rem; /* Large font size for title */
     font-weight: 800; /* Extra bold */
     color: #a855f7; /* Purple color */
     letter-spacing: 0.05em; /* Wide letter spacing */
+    text-decoration: none;
+    transform: scale(1);
+    transition: all ease-in-out 0.3s;
+}
+
+.site-title:hover {
+    color: #c084fc; /* Lighter purple on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .main-nav ul {
@@ -147,7 +155,7 @@ body::before {
 
 /* Utility classes for hiding elements */
 .hidden {
-    display: none !important;
+    display: none !important;  /* The !important rule ensures this style takes priority over other styles */
 }
 
 /* --- Styles specific to index.html (formerly in index.css) --- */
